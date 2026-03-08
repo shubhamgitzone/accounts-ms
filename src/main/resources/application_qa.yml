@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to EazyBank account"
+  contactDetails:
+    name: "Shubham QA"
+    email: "shubham@qa"
+  onCallSupport:
+    - (222)222-1234
+    - (222)222-5678
