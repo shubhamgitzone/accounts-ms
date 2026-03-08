@@ -18,6 +18,18 @@ spring:
       ddl-auto: update
     show-sql: true
 
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to EazyBank account"
+  contactDetails:
+    name: "Shubham Dev"
+    email: "shubham@dev"
+  onCallSupport:
+    - (111)111-1234
+    - (111)111-5678
+
 
 
 
