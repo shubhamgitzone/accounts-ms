@@ -3,7 +3,9 @@ server:
 
 spring:
   application:
-    name: Accounts
+    name: "accounts"
+  profiles:
+    active: "prod"
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
@@ -18,26 +20,7 @@ spring:
       ddl-auto: update
     show-sql: true
   config:
-    import:
-      - "application_qa.yml"
-      - "application_prod.yml"
-  profiles:
-    active:
-      - "qa"
-
-build:
-  version: "3.0"
-
-accounts:
-  message: "Welcome to EazyBank account"
-  contactDetails:
-    name: "Shubham Dev"
-    email: "shubham@dev"
-  onCallSupport:
-    - (111)111-1234
-    - (111)111-5678
-
-
-
-
-
+    import: "optional:configserver:http://localhost:8071/"
+    #configsever -- indicates to sb apps that it's going ot connect to configserver
+    #optional -- tells account-ms if can't connect to configserver, still starts accounts-ms
+    #             if properties are important to load then remove this optional
