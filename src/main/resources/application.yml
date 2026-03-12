@@ -24,3 +24,10 @@ spring:
     #configsever -- indicates to sb apps that it's going ot connect to configserver
     #optional -- tells account-ms if can't connect to configserver, still starts accounts-ms
     #             if properties are important to load then remove this optional
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #tells SB actuator to enable and expose all management endpoint supported by SB actuater
+        #helps change porperties value without restarting the config server

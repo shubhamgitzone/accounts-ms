@@ -37,7 +37,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 				url = "https://springdoc.org/#getting-started"
 		)
 		)
-public class AccountsApplication {
+public class
+AccountsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AccountsApplication.class, args);
