@@ -36,3 +36,5 @@ management:
       exposure:
         include: "*" #tells SB actuator to enable and expose all management endpoint supported by SB actuater
         #helps change porperties value without restarting the config server
+        # instead of *, use busRefresh for spring cloud bus
+        #             and use refresh for actuator refresh
