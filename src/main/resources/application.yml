@@ -24,6 +24,11 @@ spring:
     #configsever -- indicates to sb apps that it's going ot connect to configserver
     #optional -- tells account-ms if can't connect to configserver, still starts accounts-ms
     #             if properties are important to load then remove this optional
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
 
 management:
   endpoints:
